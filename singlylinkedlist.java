@@ -1,11 +1,9 @@
 class SinglyLinkedList {
-    // Node class representing each element in the linked list
     class Node {
         int data;
         Node next;
         
-        // Constructor to create a new node
-        Node(int data) {
+         Node(int data) {
             this.data = data;
             this.next = null;
         }
@@ -13,8 +11,7 @@ class SinglyLinkedList {
 
     Node head;
 
-    // Method to insert a new node at the end of the linked list
-    public void insertEnd(int data) {
+     public void insertEnd(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -27,7 +24,6 @@ class SinglyLinkedList {
         }
     }
 
-    // Method to perform linear search in the linked list
     public int linearSearch(int key) {
         int position = 0;
         Node temp = head;
@@ -41,7 +37,6 @@ class SinglyLinkedList {
         return -1; // Key not found
     }
 
-    // Method to display the linked list
     public void display() {
         Node temp = head;
         while (temp != null) {
@@ -60,11 +55,9 @@ class SinglyLinkedList {
         list.insertEnd(30);
         list.insertEnd(40);
         
-        // Display the linked list
         System.out.println("Linked List:");
         list.display();
         
-        // Search for a value using linear search
         int key = 30;
         int position = list.linearSearch(key);
         if (position != -1) {
